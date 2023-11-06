@@ -8,19 +8,18 @@ const int MAX_FILES = 10;
 const int MAX_FOLDERS = 5;
 
 class Folder {
+private:
 	int size;
 	int date;
-	string parentFolder[5];
+	File files[MAX_FILES];
+	Folder* subFolders[MAX_FOLDERS];
 
-private:
 
 
 public:
 	string name;
 	int fileCount = 0;
 	int folderCount = 0;
-	File files[MAX_FILES];
-	Folder* subFolders[MAX_FOLDERS];
 
 	Folder(string newName, int newSize, int newDate, File fileCount[MAX_FILES], Folder* subFolders[MAX_FOLDERS]) {
 		Folder::name = newName;
@@ -137,31 +136,6 @@ public:
 		cout << "Set new Folder name: \n";
 		cin >> name;
 	}
-	//prints name size and date
-	void print() {
-		cout << name << "\n";
-		cout << size << "\n";
-		cout << date << "\n";
-		//for (int i = 0; i < 5; i++) {
-		//	cout << folders[i] << "\n";
-		//}
-	}
 
-	void folderArray() {
-		for (int i = 0; i < 5; i++) {
-			cout << "\nFolder:" << subFolders[i];
-			//tempFolders[i] = folders[i];
-		}
-	}
-	//Prints files according to the number of files created.
-	//void fileDisplay() {
-	//	for (int i = 0; i < getFileCount(); i++) {
-	//		cout << "\nfile:";
-	//		fileAccessName(i);
-	//	}
-	//}
-	void printFolders() {
-		cout << "Hello I am printing Folders.";
-	}
 
 };
