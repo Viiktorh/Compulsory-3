@@ -57,6 +57,7 @@ public:
 			subFolders[i] = nullptr;
 		}
 	}
+	//Prints the info of the files and folders
 	void displayProgram() {
 		cout << "Folder: " << name << "\nFiles:" << "\n";
 		for (int i = 0; i < fileCount; i++) {
@@ -81,6 +82,7 @@ public:
 		}
 	}
 
+	//Creates file and increases the filecount. checks if the folder is full of files before creating.
 	void createFile(string name) {
 		if (fileCount < MAX_FILES) {
 			files[fileCount++] = File(name);

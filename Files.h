@@ -31,6 +31,7 @@ public:
 	void printInfo() {
 		cout << "File Name: " << name << "| Size: " << size << "MB |  Date of Creation: unixtimestamp:"<< date <<"/ year:" << (date / 31556926) + 1970 << "\n";
 	}
+	//finds the largest file in the folder and prints it.
 	void printLargest() {
 		cout << "The largest file is: " << name << " With size: " << size << "MB\n" << "-------------------------------------\n";
 	}
